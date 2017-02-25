@@ -2,8 +2,8 @@ import easygui
 import webbrowser
 from imgurpython import ImgurClient
 
-CLIENT_ID = 'CLIENT_ID_HERE'
-CLIENT_SECRET = 'CLIENT_SECRET_HERE'
+CLIENT_ID = 'IMGUR_CLIENT_ID_HERE'
+CLIENT_SECRET = 'IMGUR_CLIENT_SECRET_HERE'
 path = easygui.fileopenbox()
 album = None
 
@@ -13,8 +13,6 @@ def upload(client):
     }
     print("Image is being uploaded...")
     image = client.upload_from_path(path, anon=False)
-    print()
-
     return image
 
 
